@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './TodoList';
 import Form from './Form';
+import './app.css';
 
 class App extends React.Component {
 	constructor(props) {
@@ -9,22 +10,22 @@ class App extends React.Component {
 			list: ['Programing', 'Shopping'],
 			value: '',
 		};
-  }
-  handleChange = (event) => {
-    this.setState({value: event.target.value});
-  }
+	}
+	handleChange = (event) => {
+		this.setState({value: event.target.value});
+	};
 	handleSubmit = (event) => {
 		event.preventDefault();
 
 		this.setState({
-			list: [...this.state.list, this.state.value,],
+			list: [...this.state.list, this.state.value],
 			value: '',
 		});
 	};
 
 	render() {
 		return (
-			<div>
+			<div className="app">
 				<h1>TODO App</h1>
 				<Form
 					value={this.state.value}

@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 function Form(props) {
 	return (
-		<form onSubmit={props.handleSubmit}>
+		<form onSubmit={props.handleSubmit} className="form">
 			<TextField
 				name="value"
 				label="Todo"
